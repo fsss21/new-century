@@ -1,0 +1,100 @@
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #1a0f06;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.wrapBiographyItemPage{
+  flex: none;
+  background: none;
+}
+
+.wrapCatalogItemPage{
+  padding-top: 60px;
+  background: none;
+}
+
+
+.image {
+  flex: 1;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px 20px;
+  background: rgb(153, 135, 124, 40%);
+  flex-shrink: 0;
+}
+
+.navBiographyItemPage{
+  background: none;
+}
+
+.navCatalogItemPage{
+  
+  background: none;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: solid 1px #EEE3D6  ;
+  background: none;
+  border-radius: 50%;
+  color: #EEE3D6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.arrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.counter {
+  font-family: 'Anticva', serif;
+  font-size: 0.9rem;
+  color: #d4c4b0;
+  letter-spacing: 2px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin-left: auto;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #EEE3D6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.fullscreen:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

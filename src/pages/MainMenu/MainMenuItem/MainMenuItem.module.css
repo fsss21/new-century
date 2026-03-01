@@ -1,0 +1,245 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(111, 82, 54, 0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgb(234, 222, 209, 85%);
+  outline: #987A5B 1px;
+  outline-offset: 2px;
+  width: 80%;
+  height: 84%;
+}
+
+.modal {
+  position: relative;
+  width: 90%;
+  max-width: 1360px;
+  height: 70vh;
+  display: flex;
+  gap: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: inherit;
+}
+
+.modalPhoto {
+  flex-direction: column;
+  
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #987A5B;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modalCloseBtn:hover {
+  color: #af8e6c;
+  transform: translateY(-1px);
+}
+
+/* ── Info panel (25%) ── */
+.modalInfo {
+  width: 25%;
+  min-width: 220px;
+  padding: 16px;
+  background: #ECDECD;
+  border: solid #000 2px;
+  color: #f0e6d9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.textBlock{
+  background: #F7F3EE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height: 100%;
+}
+
+.textPage{
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTitle {
+  font-family: 'Raleway-v4020', sans-serif ;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #833E19;
+  margin: 0;
+}
+
+.infoSculptor {
+  font-size: 1rem;
+  color: #221102;
+}
+
+.infoMeta {
+  font-size: 1rem;
+  color: #221102;
+}
+
+.infoText { 
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #221102;
+}
+
+/* ── Text pagination ── */
+.textNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: 10px;
+}
+
+.buttonsNav{
+  display: flex;
+}
+
+.textNavArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #833E19;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.textNavArrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.textNavArrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.textNavCounter {
+  font-family: 'Anticva', serif;
+  font-size: 0.85rem;
+  color: #833E19;
+  letter-spacing: 2px;
+  min-width: 44px;
+  text-align: center;
+}
+
+/* ── Fallback full-width info ── */
+.modalInfoFull {
+  width: 100%;
+  padding: 3rem;
+  background: rgba(41, 22, 0, 0.9);
+  color: #f0e6d9;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+/* ── Video layout wrapper ── */
+.playerWrap {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* ── Photo layout ── */
+.photoLayout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.photoTop {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 10px;
+}
+
+.photoTop .modalInfo {
+  width: 25%;
+  min-width: 220px;
+}
+
+/* ── Audio section separator ── */
+.audioSection {
+  margin-top: 10px;
+  border-top: 2px solid rgba(152, 122, 91, 0.35);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .modal {
+    width: 95%;
+    height: 90vh;
+  }
+
+  .modal:not(.modalPhoto) {
+    flex-direction: column;
+  }
+
+  .modal:not(.modalPhoto) .modalInfo {
+    width: 100%;
+    min-width: unset;
+    padding: 1.5rem;
+    max-height: 30%;
+  }
+
+  .playerWrap {
+    width: 100%;
+    flex: 1;
+  }
+
+  .photoTop {
+    flex-direction: column;
+  }
+
+  .photoTop .modalInfo {
+    width: 100%;
+    min-width: unset;
+    padding: 1.5rem;
+    max-height: 30%;
+  }
+
+  .modalInfoFull {
+    padding: 1.5rem;
+  }
+}

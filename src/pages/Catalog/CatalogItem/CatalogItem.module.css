@@ -1,0 +1,148 @@
+.catalogItem {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* ── With photos: text left + gallery right ── */
+
+.contentRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1650px;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem 2rem;
+  background: none;
+  color: #f0e6d9;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.textDesc{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  color: #833E19;
+}
+
+.strongColor{
+  color:  #221102;
+}
+
+.title {
+  font-family: 'Anticva', serif;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  color: #833E19;
+  margin: 0;
+}
+
+.text {
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 1.65;
+  color: #221102;
+}
+
+.photoBlock {
+  display: flex;
+  width: 65%;
+  min-height: 0;
+}
+
+
+/* ── Text pagination ── */
+
+.textNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.arrows{
+  display: flex;
+  
+}
+
+.textNavArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #833E19;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.textNavArrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.textNavArrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.textNavCounter {
+  font-family: 'Anticva', serif;
+  font-size: 0.85rem;
+  color: #833E19;
+  letter-spacing: 2px;
+  min-width: 44px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .contentRow {
+    flex-direction: column;
+    width: 95%;
+    height: 90vh;
+  }
+
+  .textBlock {
+    width: 100%;
+    min-width: unset;
+    max-height: 35%;
+    padding: 1.5rem;
+  }
+
+  .centeredContent {
+    max-width: 95%;
+    padding: 2rem 1.5rem;
+  }
+}

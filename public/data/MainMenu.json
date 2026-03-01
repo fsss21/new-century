@@ -1,0 +1,122 @@
+{
+    "sculptors": [
+        {
+            "id": "id-video-1",
+            "title": "Чижик-Пыжик",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "Установлен у 1-го Инженерного моста",
+            "meaning": "Первый российский микропамятник породивший новую традицию",
+            "location": "location",
+            "text": "Описание Описание Описание Описание Описание Описание",
+            "video": ["/data/videos/video-1"]
+        },
+        {
+            "id": "id-video-2",
+            "title": "video-2",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": "Описание Описание Описание Описание Описание Описание",
+            "video": ["/data/videos/video-1"]
+        },
+        {
+            "id": "id-video-3",
+            "title": "video-3",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": "Описание Описание Описание Описание Описание Описание",
+            "video": ["/data/videos/video-1"]
+        },
+        {
+            "id": "id-video-4",
+            "title": "video-4",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": "Описание Описание Описание Описание Описание Описание",
+            "video": ["/data/videos/video-1"]
+        },
+        {
+            "id": "id-video-5",
+            "title": "video-5",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": "Описание Описание Описание Описание Описание Описание", 
+            "video": ["/data/videos/video-1"]
+        },
+        {
+            "id": "id-text-1",
+            "title": "Text-1",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"]
+        },
+        {
+            "id": "id-text-2",
+            "title": "Text-2",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"]
+        },
+        {
+            "id": "id-text-3",
+            "title": "Text-3",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"]
+        },
+        {
+            "id": "id-audio-1",
+            "title": "Слепой",
+            "creator": "Каминкер",
+            "date":"2002 г.",
+            "status": "Установлен на улице Правды в 2005 году",
+            "meaning": "Социальное высказывание о проблемах современного общества",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"],
+            "audio": ["/data/audios/audio-1"]
+        },
+        {
+            "id": "id-audio-2",
+            "title": "audio-2",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"],
+            "audio": ["/data/audios/audio-1"]
+        },
+        {
+            "id": "id-audio-3",
+            "title": "audio-3",
+            "creator": "Резо Габриадзе",
+            "date":"1994 г.",
+            "status": "One",
+            "meaning": "1900 г.",
+            "location": "location",
+            "text": ["Описание Описание Описание Описание Описание Описание","Описание описание"],
+            "photos": ["/data/images/place_holder_img.png"],
+            "audio": ["/data/audios/audio-1"]
+        }
+    ]
+}

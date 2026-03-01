@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "firstName": "Иван",
+        "lastName": "Иванов",
+        "surname": "Иванович",
+        "text": ["Описание предмета описание предмета описание предмета опи-сание предмета описание предмета описание описание", "Описание предмета описание предмета описание предмета опи-сание предмета описание предмета описание описание"],
+        "photos": [""]
+    },
+    {
+        "id": 2,
+        "firstName": "Ivan",
+        "lastName": "Ivanov",
+        "surname": "Ivanovich",
+        "text": ["text2"],
+        "photos": ["/data/images/place_holder_img.png"]
+    },
+    {
+        "id": 3,
+        "firstName": "Иван",
+        "lastName": "Иванов",
+        "surname": "Иванович",
+        "text": ["text3"],
+        "photos": ["/data/images/place_holder_img.png"]
+    }
+]

@@ -1,0 +1,93 @@
+.mainMenu {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainMenuBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.buttons{
+  position: absolute;
+  bottom: 2.5%;
+  right: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navigateBtn{
+  width: 100%;
+  min-height: 80px;
+  font-size: 24px;
+  padding: 4px;
+  background: none;
+  cursor: pointer;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+.navigateBtn:hover{
+  background: #AD855A;
+  outline: solid 1px #AD855A;
+  border: solid 1px #AD855A;
+  outline-offset: 4px;
+}
+
+.navigationBtns{
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.menuBtns{
+  display: flex;
+  gap:15px;
+}
+
+.menuBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: solid 1px #fff;
+  color: #fff;
+  width: 100px;
+}
+
+.searchBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: solid 1px #fff;
+  color: #fff;
+  width: 100px;
+}
+
+
+.sculptorItem {
+  z-index: 1;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sculptorItem:hover {
+  background: rgba(203, 178, 147, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
