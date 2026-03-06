@@ -123,7 +123,7 @@
 }
 
 * button{
-  font-family: 'Anticva', serif;
+  font-family: 'Raleway-v4020', sans-serif;
 }
 
 .controlsNavMenu{
@@ -135,18 +135,19 @@
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #833E19;
-  font-family: 'Anticva', serif;
+  font-family: 'Raleway-v4020', sans-serif;
+  font-weight: 600;
 }
 
 .subMenuTextBlock p {
   font-size: 20px;
   line-height: 1.6;
   color: #221102;
-  font-family: 'Raleway-v4020', serif;
+  font-family: 'Raleway-v4020', sans-serif;
 }
 
 .counter {
-  font-family: 'Anticva', serif;
+  font-family: 'Raleway-v4020', sans-serif;
   font-size: 16px;
   color: #AD855A;
   letter-spacing: 2px;

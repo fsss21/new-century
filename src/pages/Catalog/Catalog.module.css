@@ -24,8 +24,7 @@
 .catalogEmpty {
   position: relative;
   z-index: 1;
-  font-family: 'Anticva', serif;
-  font-size: 1.1rem;
+  font-family: 'Raleway-v4020', sans-serif;
   color: #291600;
   text-align: center;
   max-width: 420px;
@@ -145,7 +144,7 @@
 }
 
 .slotTitle {
-  font-family: 'Anticva', serif;
+  font-family: 'Raleway-v4020', sans-serif;
   font-size: 18px;
   font-weight: normal;
   color: #fff;
@@ -156,32 +155,32 @@
 }
 
 .slotSubTitle{
-    font-family: 'Anticva', serif;
-    font-size: 18px;
-    font-weight: normal;
-    color: #fff;
-    text-transform: uppercase;
+  font-family: 'Raleway-v4020', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .containerSlotTitle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center ;
-    height: 80px;
-    width: 400px;
-    background: #AD855A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  height: 80px;
+  width: 400px;
+  background: #AD855A;
 }
 
 .containerSlotAsideTitle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center ;
-    height: 80px;
-    width: 340px;
-    font-size: 16px;
-    background: #AD855A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  height: 80px;
+  width: 340px;
+  font-size: 16px;
+  background: #AD855A;
 }
 
 /* ── Back button ── */

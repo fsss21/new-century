@@ -71,10 +71,9 @@
 }
 
 .counter {
-  font-family: 'Anticva', serif;
+  font-family: 'Raleway-v4020', sans-serif;
   font-size: 0.9rem;
   color: #d4c4b0;
-  letter-spacing: 2px;
   min-width: 50px;
   text-align: center;
 }
