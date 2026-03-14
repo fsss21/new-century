@@ -82,20 +82,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 2px;
   padding: 12px;
   background: #EEE7DD;
   transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
   user-select: none;
+  box-sizing: border-box;
 }
 
 .slotSide {
   opacity: 0.65;
+  width: 304px;
+  min-width: 304px;
+  height: 460px;
+  min-height: 460px;
+  flex: 0 0 304px;
 }
 
 .slotCenter {
-  flex: 0 1 380px;
+  width: 384px;
+  min-width: 384px;
+  height: 592px;
+  min-height: 592px;
+  flex: 0 0 384px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   animation: appearCenter 0.4s ease-out;
@@ -107,12 +117,13 @@
 }
 
 
-/* ── Slot inner containers ── */
+/* ── Slot inner: центр крупнее, боковые меньше ── */
 .slotInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 500px;
+  flex: 1;
+  min-height: 0;
   width: 360px;
   border: solid rgb(167, 122, 74) 2px;
   background: none;
@@ -123,8 +134,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 350px;
-  width: 250px;
+  flex: 1;
+  min-height: 0;
+  width: 280px;
   border: solid rgb(167, 122, 74) 2px;
   background: none;
   overflow: hidden;
@@ -152,6 +164,12 @@
   letter-spacing: 1.5px;
   text-align: center;
   width: 100%;
+  padding: 0 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.25;
 }
 
 .slotSubTitle{
@@ -162,25 +180,33 @@
   text-transform: uppercase;
 }
 
-.containerSlotTitle{
+.containerSlotTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
+  flex-shrink: 0;
   height: 80px;
-  width: 400px;
+  width: 360px;
   background: #AD855A;
+  box-sizing: border-box;
 }
 
-.containerSlotAsideTitle{
+.containerSlotAsideTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center ;
-  height: 80px;
-  width: 340px;
-  font-size: 16px;
+  align-items: center;
+  flex-shrink: 0;
+  height: 70px;
+  width: 280px;
   background: #AD855A;
+  box-sizing: border-box;
+}
+
+.containerSlotAsideTitle .slotTitle {
+  font-size: 13px;
+  -webkit-line-clamp: 2;
 }
 
 /* ── Back button ── */

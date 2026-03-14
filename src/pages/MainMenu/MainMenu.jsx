@@ -50,10 +50,20 @@ const MainMenu = () => {
 
     return (
         <div className={styles.mainMenu}>
-            <div
-                className={styles.mainMenuBackground}
-                style={{ backgroundImage: `url(${backgroundSrc})` }}
-            />
+            <div className={styles.mainMenuFrame}>
+                <div
+                    className={styles.mainMenuBackground}
+                    style={{ backgroundImage: `url(${backgroundSrc})` }}
+                />
+                {sculptors.map((sculptor, idx) => (
+                    <div
+                        key={`${sculptor.id}-${idx}`}
+                        className={styles.sculptorItem}
+                        style={itemStyles[sculptor.id]}
+                        onClick={() => setSelectedItem(sculptor)}
+                    />
+                ))}
+            </div>
             <div className={styles.buttons}>
                 <div className={styles.navigationBtns}>
                     <button className={styles.navigateBtn} onClick={handleClickPetersburg}>Развитие петербургской <br /> скульптуры XX-XXI веков</button>
@@ -65,14 +75,6 @@ const MainMenu = () => {
                     <button className={styles.searchBtn}><SearchIcon fontSize='large' /></button>
                 </div>
             </div>
-            {sculptors.map((sculptor, idx) => (
-                <div
-                    key={`${sculptor.id}-${idx}`}
-                    className={styles.sculptorItem}
-                    style={itemStyles[sculptor.id]}
-                    onClick={() => setSelectedItem(sculptor)}
-                />
-            ))}
 
             {selectedItem && (
                 <MainMenuItem

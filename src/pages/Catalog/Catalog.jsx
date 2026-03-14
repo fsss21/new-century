@@ -24,7 +24,16 @@ function matchesSearch(item, q) {
     const lower = q.trim().toLowerCase()
     const title = (item.title ?? '').toLowerCase()
     const sculptor = (item.sculptor ?? '').toLowerCase()
-    return title.includes(lower) || sculptor.includes(lower)
+    const location = (item.location ?? '').toLowerCase()
+    const material = (item.material ?? '').toLowerCase()
+    const textStr = (Array.isArray(item.text) ? item.text.join(' ') : (item.text ?? '')).toLowerCase()
+    return (
+        title.includes(lower) ||
+        sculptor.includes(lower) ||
+        location.includes(lower) ||
+        material.includes(lower) ||
+        textStr.includes(lower)
+    )
 }
 
 const Catalog = () => {
@@ -107,6 +116,8 @@ const Catalog = () => {
         return null
     }
 
+    const getSlotTitle = (item) => item?.title ?? ''
+
     if (items.length === 0) {
         return (
             <div className={styles.catalog}>
@@ -147,7 +158,7 @@ const Catalog = () => {
                                 )}
                             </div>
                             <div className={styles.containerSlotAsideTitle}>
-                                <span className={styles.slotTitle}>{prevItem.title}</span>
+                                <span className={styles.slotTitle}>{getSlotTitle(prevItem)}</span>
                                 <span className={styles.slotSubTitle}>{prevItem.date}</span>
                             </div>
                         </div>
@@ -164,7 +175,7 @@ const Catalog = () => {
 
                             </div>
                             <div className={styles.containerSlotTitle}>
-                                <span className={styles.slotTitle}>{centerItem.title}</span>
+                                <span className={styles.slotTitle}>{getSlotTitle(centerItem)}</span>
                                 <span className={styles.slotSubTitle}>{centerItem.date}</span>
                             </div>
                         </div>
@@ -181,7 +192,7 @@ const Catalog = () => {
 
                             </div>
                             <div className={styles.containerSlotAsideTitle}>
-                                <span className={styles.slotTitle}>{nextItem.title}</span>
+                                <span className={styles.slotTitle}>{getSlotTitle(nextItem)}</span>
                                 <span className={styles.slotSubTitle}>{nextItem.date}</span>
                             </div>
                         </div>

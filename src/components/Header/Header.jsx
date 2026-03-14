@@ -64,6 +64,7 @@ function Header() {
     const [filtersOpen, setFiltersOpen] = useState(false)
     const [searchOpen, setSearchOpen] = useState(false)
     const [localSearch, setLocalSearch] = useState(searchQuery)
+    const [hiddenSections, setHiddenSections] = useState({ sculptors: false, eras: false, materials: false, tombstoneTypes: false })
 
     // Fetch catalog for nav (biography/catalog item)
     useEffect(() => {
@@ -154,10 +155,9 @@ function Header() {
         updateParams({ [PARAM_TOMBSTONE]: next })
     }
 
-    const resetSculptors = () => updateParams({ [PARAM_SCULPTORS]: [] })
-    const resetEras = () => updateParams({ [PARAM_ERAS]: [] })
-    const resetMaterials = () => updateParams({ [PARAM_MATERIALS]: [] })
-    const resetTombstoneTypes = () => updateParams({ [PARAM_TOMBSTONE]: [] })
+    const toggleSectionVisible = (key) => {
+        setHiddenSections((prev) => ({ ...prev, [key]: !prev[key] }))
+    }
 
     const handleFiltersToggle = () => setFiltersOpen((o) => !o)
     const handleShowFilters = () => setFiltersOpen(false)
@@ -235,93 +235,137 @@ function Header() {
 
                                 {filterOptions.sculptors.length > 0 && (
                                     <div className={styles.headerFilterBlock}>
-                                        <div className={styles.headerFilterLabelWrap}>
-                                            <span className={styles.headerFilterLabel}>Скульпторы</span>
-                                            <button type="button" className={styles.headerResetBtn} onClick={resetSculptors}>
-                                                Сбросить
-                                            </button>
-                                        </div>
-                                        <div className={styles.headerFilterOptions}>
-                                            {filterOptions.sculptors.map((name) => (
-                                                <label key={name} className={styles.headerFilterCheck}>
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedSculptors.includes(name)}
-                                                        onChange={() => toggleSculptor(name)}
-                                                    />
-                                                    {name}
-                                                </label>
-                                            ))}
-                                        </div>
+                                        {hiddenSections.sculptors ? (
+                                            <div className={styles.headerFilterLabelWrap}>
+                                                <span className={styles.headerFilterLabel}>Скульпторы</span>
+                                                <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('sculptors')}>
+                                                    Показать
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className={styles.headerFilterLabelWrap}>
+                                                    <span className={styles.headerFilterLabel}>Скульпторы</span>
+                                                    <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('sculptors')}>
+                                                        Скрыть
+                                                    </button>
+                                                </div>
+                                                <div className={styles.headerFilterOptions}>
+                                                    {filterOptions.sculptors.map((name) => (
+                                                        <label key={name} className={styles.headerFilterCheck}>
+                                                            <input
+                                                                type="checkbox"
+                                                                checked={selectedSculptors.includes(name)}
+                                                                onChange={() => toggleSculptor(name)}
+                                                            />
+                                                            {name}
+                                                        </label>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 )}
 
                                 {filterOptions.eras.length > 0 && (
                                     <div className={styles.headerFilterBlock}>
-                                        <div className={styles.headerFilterLabelWrap}>
-                                            <span className={styles.headerFilterLabel}>Эпохи</span>
-                                            <button type="button" className={styles.headerResetBtn} onClick={resetEras}>
-                                                Сбросить
-                                            </button>
-                                        </div>
-                                        <div className={styles.headerFilterOptions}>
-                                            {filterOptions.eras.map((name) => (
-                                                <label key={name} className={styles.headerFilterCheck}>
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedEras.includes(name)}
-                                                        onChange={() => toggleEra(name)}
-                                                    />
-                                                    {name}
-                                                </label>
-                                            ))}
-                                        </div>
+                                        {hiddenSections.eras ? (
+                                            <div className={styles.headerFilterLabelWrap}>
+                                                <span className={styles.headerFilterLabel}>Года</span>
+                                                <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('eras')}>
+                                                    Показать
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className={styles.headerFilterLabelWrap}>
+                                                    <span className={styles.headerFilterLabel}>Года</span>
+                                                    <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('eras')}>
+                                                        Скрыть
+                                                    </button>
+                                                </div>
+                                                <div className={styles.headerFilterOptions}>
+                                                    {filterOptions.eras.map((name) => (
+                                                        <label key={name} className={styles.headerFilterCheck}>
+                                                            <input
+                                                                type="checkbox"
+                                                                checked={selectedEras.includes(name)}
+                                                                onChange={() => toggleEra(name)}
+                                                            />
+                                                            {name}
+                                                        </label>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 )}
 
                                 {filterOptions.materials.length > 0 && (
                                     <div className={styles.headerFilterBlock}>
-                                        <div className={styles.headerFilterLabelWrap}>
-                                            <span className={styles.headerFilterLabel}>Материал</span>
-                                            <button type="button" className={styles.headerResetBtn} onClick={resetMaterials}>
-                                                Сбросить
-                                            </button>
-                                        </div>
-                                        <div className={styles.headerFilterOptions}>
-                                            {filterOptions.materials.map((name) => (
-                                                <label key={name} className={styles.headerFilterCheck}>
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedMaterials.includes(name)}
-                                                        onChange={() => toggleMaterial(name)}
-                                                    />
-                                                    {name}
-                                                </label>
-                                            ))}
-                                        </div>
+                                        {hiddenSections.materials ? (
+                                            <div className={styles.headerFilterLabelWrap}>
+                                                <span className={styles.headerFilterLabel}>Материал</span>
+                                                <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('materials')}>
+                                                    Показать
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className={styles.headerFilterLabelWrap}>
+                                                    <span className={styles.headerFilterLabel}>Материал</span>
+                                                    <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('materials')}>
+                                                        Скрыть
+                                                    </button>
+                                                </div>
+                                                <div className={styles.headerFilterOptions}>
+                                                    {filterOptions.materials.map((name) => (
+                                                        <label key={name} className={styles.headerFilterCheck}>
+                                                            <input
+                                                                type="checkbox"
+                                                                checked={selectedMaterials.includes(name)}
+                                                                onChange={() => toggleMaterial(name)}
+                                                            />
+                                                            {name}
+                                                        </label>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 )}
 
                                 {filterOptions.tombstoneTypes.length > 0 && (
                                     <div className={styles.headerFilterBlock}>
-                                        <div className={styles.headerFilterLabelWrap}>
-                                            <span className={styles.headerFilterLabel}>Типы надгробий</span>
-                                            <button type="button" className={styles.headerResetBtn} onClick={resetTombstoneTypes}>
-                                                Сбросить
-                                            </button>
-                                        </div>
-                                        <div className={styles.headerFilterOptions}>
-                                            {filterOptions.tombstoneTypes.map((name) => (
-                                                <label key={name} className={styles.headerFilterCheck}>
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedTombstoneTypes.includes(name)}
-                                                        onChange={() => toggleTombstoneType(name)}
-                                                    />
-                                                    {name}
-                                                </label>
-                                            ))}
-                                        </div>
+                                        {hiddenSections.tombstoneTypes ? (
+                                            <div className={styles.headerFilterLabelWrap}>
+                                                <span className={styles.headerFilterLabel}>Типы надгробий</span>
+                                                <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('tombstoneTypes')}>
+                                                    Показать
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className={styles.headerFilterLabelWrap}>
+                                                    <span className={styles.headerFilterLabel}>Типы надгробий</span>
+                                                    <button type="button" className={styles.headerHideBtn} onClick={() => toggleSectionVisible('tombstoneTypes')}>
+                                                        Скрыть
+                                                    </button>
+                                                </div>
+                                                <div className={styles.headerFilterOptions}>
+                                                    {filterOptions.tombstoneTypes.map((name) => (
+                                                        <label key={name} className={styles.headerFilterCheck}>
+                                                            <input
+                                                                type="checkbox"
+                                                                checked={selectedTombstoneTypes.includes(name)}
+                                                                onChange={() => toggleTombstoneType(name)}
+                                                            />
+                                                            {name}
+                                                        </label>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 )}
 
@@ -351,7 +395,7 @@ function Header() {
                                     <input
                                         type="text"
                                         className={styles.headerSearchInput}
-                                        placeholder="Найти произведение или автора"
+                                        placeholder="Название, автор, материал, место"
                                         value={localSearch}
                                         onChange={(e) => setLocalSearch(e.target.value)}
                                         autoFocus
