@@ -13,6 +13,7 @@ const MainMenu = () => {
     const [sculptors, setSculptors] = useState([])
     const [itemStyles, setItemStyles] = useState({})
     const [backgroundSrc, setBackgroundSrc] = useState(mainMenuImg)
+    const [resolutionMode, setResolutionMode] = useState('fullHd')
     const [selectedItem, setSelectedItem] = useState(null)
     const navigate = useNavigate()
 
@@ -30,8 +31,17 @@ const MainMenu = () => {
 
     useEffect(() => {
         const updateBackground = () => {
-            const is4K = window.innerWidth >= 2560 || window.innerHeight >= 1440
-            setBackgroundSrc(is4K ? mainMenuImg4k : mainMenuImg)
+            // Фон оставляем на прежнем пороге, чтобы не менять текущую верстку/картинку.
+            const is4kBg = window.innerWidth >= 2560 || window.innerHeight >= 1440
+            // Режимы стилей: fullHd -> 2k -> 4k
+            const w = window.innerWidth
+            const h = window.innerHeight
+            const nextMode =
+                w >= 3840 || h >= 2160
+                    ? '4k'
+                    : (w >= 2560 || h >= 1440 ? '2k' : 'fullHd')
+            setResolutionMode(nextMode)
+            setBackgroundSrc(is4kBg ? mainMenuImg4k : mainMenuImg)
         }
         updateBackground()
         window.addEventListener('resize', updateBackground)
@@ -59,7 +69,11 @@ const MainMenu = () => {
                     <div
                         key={`${sculptor.id}-${idx}`}
                         className={styles.sculptorItem}
-                        style={itemStyles[sculptor.id]}
+                        style={
+                            itemStyles?.[sculptor.id]?.[resolutionMode]
+                            ?? itemStyles?.[sculptor.id]?.fullHd
+                            ?? itemStyles?.[sculptor.id]
+                        }
                         onClick={() => setSelectedItem(sculptor)}
                     />
                 ))}

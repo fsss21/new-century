@@ -249,3 +249,84 @@
     flex: 1;
   }
 }
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .background {
+    background-position: center 24%;
+  }
+
+  .carousel {
+    max-width: 1900px;
+    gap: 30px;
+  }
+
+  .backgroundSlot {
+    min-height: 620px;
+    width: 460px;
+  }
+
+  .backgroundSlotSide {
+    min-height: 430px;
+    width: 330px;
+  }
+
+  .slotLastName,
+  .slotFirstName,
+  .slotSurname {
+    font-size: 2rem;
+  }
+
+  .moreBtn,
+  .catalogBtn {
+    padding: 18px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .background {
+    background-position: center 26%;
+  }
+
+  .carousel {
+    max-width: 2800px;
+    gap: 44px;
+  }
+
+  .arrow {
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+
+  .backgroundSlot {
+    min-height: 860px;
+    width: 630px;
+    border-width: 2px;
+  }
+
+  .backgroundSlotSide {
+    min-height: 600px;
+    width: 460px;
+    border-width: 2px;
+  }
+
+  .slotLastName,
+  .slotFirstName,
+  .slotSurname {
+    font-size: 2.8rem;
+  }
+
+  .moreBtn,
+  .catalogBtn {
+    padding: 24px;
+    font-size: 34px;
+    border-width: 3px;
+  }
+
+  .backBtn {
+    padding: 20px;
+    font-size: 24px;
+    border-width: 3px;
+  }
+}

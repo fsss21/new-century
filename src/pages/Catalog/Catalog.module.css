@@ -259,3 +259,157 @@
     min-height: 360px;
   }
 }
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .background {
+    background-position: center 24%;
+  }
+
+  .carousel {
+    max-width: 2200px;
+    gap: 38px;
+    padding: 0 2.5rem;
+  }
+
+  .arrow {
+    width: 64px;
+    height: 64px;
+    border-width: 3px;
+  }
+
+  .arrow :global(svg) {
+    font-size: 38px;
+  }
+
+  .slotSide {
+    width: 360px;
+    min-width: 360px;
+    height: 560px;
+    min-height: 560px;
+    flex: 0 0 360px;
+  }
+
+  .slotCenter {
+    width: 460px;
+    min-width: 460px;
+    height: 700px;
+    min-height: 700px;
+    flex: 0 0 460px;
+  }
+
+  .slotInner {
+    width: 430px;
+  }
+
+  .slotInnerSide {
+    width: 332px;
+  }
+
+  .containerSlotTitle {
+    width: 430px;
+    height: 96px;
+  }
+
+  .containerSlotAsideTitle {
+    width: 332px;
+    height: 84px;
+  }
+
+  .slotTitle,
+  .slotSubTitle {
+    font-size: 26px;
+  }
+
+  .containerSlotAsideTitle .slotTitle {
+    font-size: 18px;
+  }
+
+  .containerBackBtn {
+    bottom: 6%;
+    left: 7%;
+  }
+
+  .backBtn {
+    padding: 18px 20px;
+    font-size: 22px;
+    border-width: 3px;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .background {
+    background-position: center 26%;
+  }
+
+  .carousel {
+    max-width: 3200px;
+    gap: 56px;
+    padding: 0 3rem;
+  }
+
+  .arrow {
+    width: 90px;
+    height: 90px;
+    border-width: 4px;
+  }
+
+  .arrow :global(svg) {
+    font-size: 56px;
+  }
+
+  .slotSide {
+    width: 520px;
+    min-width: 520px;
+    height: 760px;
+    min-height: 760px;
+    flex: 0 0 520px;
+  }
+
+  .slotCenter {
+    width: 640px;
+    min-width: 640px;
+    height: 960px;
+    min-height: 960px;
+    flex: 0 0 640px;
+  }
+
+  .slotInner {
+    width: 600px;
+    border-width: 3px;
+  }
+
+  .slotInnerSide {
+    width: 492px;
+    border-width: 3px;
+  }
+
+  .containerSlotTitle {
+    width: 600px;
+    height: 124px;
+  }
+
+  .containerSlotAsideTitle {
+    width: 492px;
+    height: 108px;
+  }
+
+  .slotTitle,
+  .slotSubTitle {
+    font-size: 38px;
+  }
+
+  .containerSlotAsideTitle .slotTitle {
+    font-size: 28px;
+  }
+
+  .containerBackBtn {
+    bottom: 6.5%;
+    left: 6.5%;
+  }
+
+  .backBtn {
+    padding: 24px 28px;
+    font-size: 32px;
+    border-width: 4px;
+  }
+}

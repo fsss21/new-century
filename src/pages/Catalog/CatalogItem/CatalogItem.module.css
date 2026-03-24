@@ -146,3 +146,100 @@
     padding: 2rem 1.5rem;
   }
 }
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .background {
+    background-position: center 24%;
+  }
+
+  .contentRow {
+    max-width: 2300px;
+    height: 78vh;
+  }
+
+  .textBlock {
+    max-width: 700px;
+    padding: 3rem 2.4rem;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+
+  .textBlockContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    
+  }
+
+  .textDesc{
+    margin-top: 0;
+  }
+
+  .textNav {
+    gap: 18px;
+    padding-top: 18px;
+  }
+
+  .textNavArrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .textNavArrow :global(svg) {
+    font-size: 30px;
+  }
+
+  .textNavCounter {
+    font-size: 1.05rem;
+    min-width: 64px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .background {
+    background-position: center 26%;
+  }
+
+  .contentRow {
+    max-width: 3200px;
+    height: 80vh;
+  }
+
+  .textBlock {
+    max-width: 980px;
+    padding: 3.6rem 3rem;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+
+  .text {
+    font-size: 38px;
+    line-height: 1.7;
+  }
+
+  .textNavArrow {
+    width: 56px;
+    height: 56px;
+  }
+
+  .textNavArrow :global(svg) {
+    font-size: 42px;
+  }
+
+  .textNavCounter {
+    font-size: 1.6rem;
+    min-width: 88px;
+    letter-spacing: 4px;
+  }
+}

@@ -1,103 +1,290 @@
 {
 "sculptorsStyles": {
     "id-video-1": {
-      "position": "absolute",
-      "bottom": "28%",
-      "left": "20.8%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "bottom": "28%",
+        "left": "20.8%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "bottom": "32%",
+        "left": "21%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "bottom": "33%",
+        "left": "21.3%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-video-2": {
-      "position": "absolute",
-      "top": "27%",
-      "left": "22.5%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "27%",
+        "left": "22.5%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "27%",
+        "left": "22.7%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "27%",
+        "left": "23%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-video-3": {
-      "position": "absolute",
-      "top": "43%",
-      "left": "38%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "43%",
+        "left": "38%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "42%",
+        "left": "38.1%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "42.4%",
+        "left": "38.4%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-video-4": {
-      "position": "absolute",
-      "top": "30%",
-      "right": "37.5%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "30%",
+        "right": "37.5%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "30%",
+        "right": "37.7%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "30%",
+        "right": "38%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-video-5": {
-      "position": "absolute",
-      "top": "44%",
-      "right": "20.3%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "44%",
+        "right": "20.3%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "43%",
+        "right": "20.4%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "43.4%",
+        "right": "20.8%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-text-1": {
-      "position": "absolute",
-      "top": "36.7%",
-      "left": "33%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "36.7%",
+        "left": "33%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "36%",
+        "left": "33.2%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "36.7%",
+        "left": "33.4%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-text-2": {
-      "position": "absolute",
-      "top": "25%",
-      "right": "43.4%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "25%",
+        "right": "43.4%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "25%",
+        "right": "43.5%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "25%",
+        "right": "43.8%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-text-3": {
-      "position": "absolute",
-      "top": "16.8%",
-      "right": "16.9%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "16.8%",
+        "right": "16.9%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "17%",
+        "right": "17%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "17.3%",
+        "right": "17.3%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-audio-1": {
-      "position": "absolute",
-      "bottom": "19%",
-      "right": "44.8%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "bottom": "19%",
+        "right": "44.8%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "bottom": "24.6%",
+        "right": "44.9%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "bottom": "25%",
+        "right": "45.2%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-audio-2": {
-      "position": "absolute",
-      "bottom": "26.5%",
-      "right": "41%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "bottom": "26.5%",
+        "right": "41%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "bottom": "31.5%",
+        "right": "41.2%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "bottom": "32%",
+        "right": "41.4%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     },
     "id-audio-3": {
-      "position": "absolute",
-      "top": "27%",
-      "right": "13.5%",
-      "width": "65px",
-      "height": "100px",
-      "cursor": "pointer"
-      
+      "fullHd": {
+        "position": "absolute",
+        "top": "27%",
+        "right": "13.5%",
+        "width": "65px",
+        "height": "100px",
+        "cursor": "pointer"
+      },
+      "2k": {
+        "position": "absolute",
+        "top": "27%",
+        "right": "13.6%",
+        "width": "80px",
+        "height": "120px",
+        "cursor": "pointer"
+      },
+      "4k": {
+        "position": "absolute",
+        "top": "27%",
+        "right": "14%",
+        "width": "100px",
+        "height": "160px",
+        "cursor": "pointer"
+      }
     }
   }
 }

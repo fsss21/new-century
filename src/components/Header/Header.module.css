@@ -316,10 +316,238 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 2560px), (min-height: 1440px) {
+  .header{
+    padding: 40px 0;
+    margin-left: 4%;
+  }
+
+  .headerWithSection,
+  .headerCatalogPage {
+    padding: 40px 0;
+  }
+
+  .headerBiographyPage {
+    padding: 60px 0;
+  }
+
+  .headerMainMenuPage {
+    padding: 60px 0;
+  }
+
+  .headerSubMenuPage {
+    padding: 60px 0;
+  }
+
   .headerTitle {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 34px;
+  }
+
+  .navButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 34px;
+    width: 385px;
+  }
+  
+  .arrows{
+    display: flex;
+    gap: 3px;
+  }
+  
+  .navButton{
+    width: 70px;
+    height: 70px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .closeButton{
+    width: 170px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .catalogButtons,
+  .headerButtons {
+    gap: 18px;
+    margin-right: 40px;
+  }
+
+  .catalogBtn,
+  .headerBtnFilters,
+  .headerBtnSearch {
+    width: 68px;
+    height: 68px;
+  }
+
+  .catalogBtn :global(svg),
+  .headerBtnFilters :global(svg),
+  .headerBtnSearch :global(svg),
+  .navButton :global(svg) {
+    font-size: 38px;
+  }
+
+  .headerDropdown {
+    min-width: 420px;
+    max-width: 520px;
+    border-radius: 10px;
+    padding: 22px;
+  }
+
+  .headerDropdownTitle {
+    font-size: 1.35rem;
+  }
+
+  .headerFilterLabel,
+  .headerFilterCheck {
+    font-size: 1.05rem;
+  }
+
+  .headerResetBtn,
+  .headerHideBtn {
+    font-size: 0.95rem;
+  }
+
+  .headerFilterCheck input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .headerShowBtn {
+    padding: 14px 18px;
+    font-size: 1.1rem;
+  }
+
+  .headerSearchPanel {
+    min-width: 560px;
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .headerSearchInput {
+    padding: 11px 12px;
+    font-size: 18px;
+  }
+
+  .headerSearchIconBtn :global(svg),
+  .headerSearchClose :global(svg) {
+    font-size: 30px;
   }
 }
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .header{
+    padding: 58px 0;
+    margin-left: 4.5%;
+  }
+
+  .headerWithSection,
+  .headerCatalogPage {
+    padding: 30px 0;
+  }
+
+  .headerTitle {
+    font-size: 50px;
+  }
+
+  .navButtons{
+    margin-right: 48px;
+    width: 650px;
+  }
   
+  .arrows{
+    gap: 10px;
+    margin-right: 94px;
+  }
+  
+  .navButton{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .closeButton{
+    width: 250px;
+    height: 100px;
+  }
+
+  .catalogButtons,
+  .headerButtons {
+    gap: 26px;
+    margin-right: 56px;
+  }
+
+  .catalogBtn,
+  .headerBtnFilters,
+  .headerBtnSearch {
+    width: 96px;
+    height: 96px;
+  }
+
+  .catalogBtn :global(svg),
+  .headerBtnFilters :global(svg),
+  .headerBtnSearch :global(svg),
+  .navButton :global(svg) {
+    font-size: 56px;
+  }
+
+  .headerDropdown {
+    min-width: 620px;
+    max-width: 760px;
+    border-radius: 14px;
+    padding: 28px;
+  }
+
+  .headerDropdownHeader,
+  .headerFilterBlock {
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+
+  .headerDropdownTitle {
+    font-size: 1.8rem;
+  }
+
+  .headerFilterLabel,
+  .headerFilterCheck {
+    font-size: 1.35rem;
+  }
+
+  .headerResetBtn,
+  .headerHideBtn {
+    font-size: 1.2rem;
+  }
+
+  .headerFilterCheck input {
+    width: 26px;
+    height: 26px;
+  }
+
+  .headerShowBtn {
+    padding: 18px 20px;
+    font-size: 1.4rem;
+    border-width: 3px;
+  }
+
+  .headerSearchPanel {
+    min-width: 820px;
+    border-radius: 12px;
+    padding: 24px;
+    gap: 18px;
+  }
+
+  .headerSearchInput {
+    padding: 14px 16px;
+    font-size: 28px;
+    border-radius: 8px;
+  }
+
+  .headerSearchIconBtn :global(svg),
+  .headerSearchClose :global(svg) {
+    font-size: 44px;
+  }
+}

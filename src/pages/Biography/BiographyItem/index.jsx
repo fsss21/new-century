@@ -72,8 +72,10 @@ const BiographyItem = () => {
             {hasPhotos ? (
                 <div className={styles.contentRow}>
                     <aside className={styles.textBlock}>
-                        <h2 className={styles.title}>{fullName}</h2>
-                        <p className={styles.text}>{textPages[textPage]}</p>
+                        <div className={styles.textBlockContent}>
+                            <h2 className={styles.title}>{fullName}</h2>
+                            <p className={styles.text}>{textPages[textPage]}</p>
+                        </div>
                         {hasMultiplePages && (
                             <div className={styles.textNav}>
                                 <button

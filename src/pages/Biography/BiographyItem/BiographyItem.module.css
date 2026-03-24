@@ -47,6 +47,14 @@
   overflow-y: auto;
 }
 
+.textBlockContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 170px;
+  gap: 12px;
+}
+
 .title {
   font-family: 'Raleway-v4020', sans-serif;
   font-size: 28px;
@@ -58,7 +66,7 @@
 }
 
 .text {
-  margin-top: 40px;
+
   font-size: 20px;
   line-height: 1.65;
   color: #833E19;
@@ -168,5 +176,78 @@
   .centeredContent {
     max-width: 95%;
     padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .background {
+    background-position: center 24%;
+  }
+
+  .contentRow {
+    max-width: 2200px;
+    height: 78vh;
+  }
+
+  .textBlock {
+    max-width: 1200px;
+    padding: 3rem 2.4rem;
+  }
+
+  .title,
+  .titleCentered {
+    font-size: 40px;
+  }
+
+  .centeredContent {
+    max-width: 1200px;
+    min-height: 1000px;
+  }
+
+  .text,
+  .textCentered {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .background {
+    background-position: center 26%;
+  }
+
+  .contentRow {
+    max-width: 3200px;
+    height: 80vh;
+  }
+
+  .textBlock {
+    max-width: 1700px;
+    padding: 3.6rem 3rem;
+    gap: 20px;
+  }
+
+  .centeredContent {
+    max-width: 1200px;
+    height: 1100px;
+  }
+
+  .title,
+  .titleCentered {
+    font-size: 56px;
+  }
+
+  .text,
+  .textCentered {
+    font-size: 40px;
+    line-height: 1.7;
+  }
+
+  .textNavArrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .textNavCounter {
+    font-size: 1.2rem;
   }
 }

@@ -66,12 +66,14 @@ const CatalogItem = () => {
             <div className={styles.background} style={{ backgroundImage: `url(${BackgroundSrc})` }} />
             <div className={styles.contentRow}>
                 <aside className={styles.textBlock}>
-                    <h2 className={styles.title}>{title}</h2>
-                    <div className={styles.textDesc}>
-                        <span><strong className={styles.strongColor}>Скульптор:</strong> {sculptor}</span>
-                        <span><strong className={styles.strongColor}>Время создания:</strong>{date}</span>
-                        <span><strong className={styles.strongColor}>Где находится:</strong>{location}</span>
-                        <p className={styles.text}>{textPages[textPage]}</p>
+                    <div className={styles.textBlockContent}>
+                        <h2 className={styles.title}>{title}</h2>
+                        <div className={styles.textDesc}>
+                            <span><strong className={styles.strongColor}>Скульптор:</strong> {sculptor}</span>
+                            <span><strong className={styles.strongColor}>Время создания:</strong>{date}</span>
+                            <span><strong className={styles.strongColor}>Где находится:</strong>{location}</span>
+                            <p className={styles.text}>{textPages[textPage]}</p>
+                        </div>
                     </div>
                     {hasMultiplePages && (
                         <div className={styles.textNav}>

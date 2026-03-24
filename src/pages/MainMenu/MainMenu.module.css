@@ -9,14 +9,8 @@
   background: #000;
 }
 
-/* Обёртка с фиксированным соотношением сторон — координаты хотспотов привязаны к кадру, не уплывают на 2K/4K */
-.mainMenuFrame {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  width: min(100vw, 100vh * 16 / 9);
-  height: min(100vh, 100vw * 9 / 16);
-  flex-shrink: 0;
-}
+
+
 
 .mainMenuBackground {
   position: absolute;
@@ -93,6 +87,81 @@
   border: solid 1px #fff;
   color: #fff;
   width: 100px;
+}
+
+/* Адаптив кнопок для 2K */
+@media (min-width: 2560px), (min-height: 1440px) {
+  .buttons {
+    max-width: 1700px;
+    height: 200px;
+    gap: 22px;
+    bottom: 3%;
+    right: 1.2%;
+  }
+
+  .navigationBtns {
+    max-width: 1400px;
+    gap: 22px;
+  }
+
+  .navigateBtn {
+    min-height: 136px;
+    font-size: 28px;
+    padding: 8px 12px;
+  }
+
+  .menuBtns {
+    gap: 22px;
+  }
+
+  .menuBtn,
+  .searchBtn {
+    width: 130px;
+    min-height: 96px;
+  }
+
+  .menuBtn :global(svg),
+  .searchBtn :global(svg) {
+    font-size: 42px;
+  }
+}
+
+/* Адаптив кнопок для 4K */
+@media (min-width: 3840px), (min-height: 2160px) {
+  .buttons {
+    max-width: 2400px;
+    gap: 30px;
+    bottom: 3.2%;
+    right: 1.5%;
+  }
+
+  .navigationBtns {
+    max-width: 2000px;
+    gap: 30px;
+  }
+
+  .navigateBtn {
+    min-height: 128px;
+    font-size: 38px;
+    padding: 12px 16px;
+    border-width: 2px;
+  }
+
+  .menuBtns {
+    gap: 30px;
+  }
+
+  .menuBtn,
+  .searchBtn {
+    width: 170px;
+    min-height: 128px;
+    border-width: 2px;
+  }
+
+  .menuBtn :global(svg),
+  .searchBtn :global(svg) {
+    font-size: 56px;
+  }
 }
 
 

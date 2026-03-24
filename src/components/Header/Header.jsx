@@ -26,7 +26,8 @@ function Header() {
     const [items, setItems] = useState([])
     const [catalogItems, setCatalogItems] = useState([])
 
-    const isMainMenuPage = location.pathname === '/'
+    const [isMainMenuPage, isBiographyPage, isSubMenuPage] = ['/', '/biography', '/sub-menu']
+        .map((path) => location.pathname === path)
 
     const section = useMemo(() => {
         if (location.pathname.startsWith('/biography/') && location.pathname !== '/biography') return 'biography'
@@ -35,6 +36,8 @@ function Header() {
     }, [location.pathname])
 
     const isCatalogPage = location.pathname === '/catalog'
+
+
 
     const currentId = useMemo(() => {
         if (!section) return null
@@ -176,9 +179,18 @@ function Header() {
         setLocalSearch(searchQuery)
     }, [searchQuery])
 
+    const headerClassName = [
+        styles.header,
+        section && styles.headerWithSection,
+        isCatalogPage && styles.headerCatalogPage,
+        isBiographyPage && styles.headerBiographyPage,
+        isMainMenuPage && styles.headerMainMenuPage,
+        isSubMenuPage && styles.headerSubMenuPage,
+    ].filter(Boolean).join(' ')
+
     return (
         <header
-            className={`${styles.header} ${section ? styles.headerWithSection : ''} ${isCatalogPage ? styles.headerCatalogPage : ''}`}
+            className={headerClassName}
         >
             <div className={styles.headerTitleBlock}>
                 <h2 className={`${styles.headerTitle} ${isMainMenuPage ? styles.headerTitleMainMenu : ''}`}>

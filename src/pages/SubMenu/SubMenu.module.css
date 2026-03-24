@@ -293,3 +293,83 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .subMenu {
+    padding-top: 130px;
+  }
+
+  .subMenuCenterText h1 {
+    font-size: 3.2rem;
+  }
+
+  .subMenuCenterText p {
+    font-size: 1.5rem;
+  }
+
+  .subMenuTextBlock h2 {
+    font-size: 2.2rem;
+  }
+
+  .subMenuTextBlock p {
+    font-size: 26px;
+  }
+
+  .subMenuMainContentMenu {
+    max-width: 920px;
+    min-height: 1100px;
+  }
+  .subMenuTextBlockCentered {
+    max-width: 1100px;
+  }
+
+  .subMenuGalleryBlock {
+    max-width: 1150px;
+  }
+
+  .subMenuGalleryWrapper,
+  .subMenuGalleryWrapper :global(div[class*="photoGallery"]),
+  .subMenuGalleryControls {
+    max-width: 1020px;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .subMenu {
+    padding-top: 170px;
+  }
+
+  .subMenuCenterText h1 {
+    font-size: 4rem;
+  }
+
+  .subMenuCenterText p {
+    font-size: 1.9rem;
+  }
+
+  .subMenuTextBlock h2 {
+    font-size: 2.9rem;
+  }
+
+  .subMenuTextBlock p {
+    font-size: 34px;
+  }
+
+  .subMenuMainContentMenu {
+    max-width: 1220px;
+  }
+
+  .subMenuBottomNavigation {
+    max-width: 900px;
+  }
+
+  .subMenuGalleryBlock {
+    max-width: 1500px;
+  }
+
+  .subMenuGalleryWrapper,
+  .subMenuGalleryWrapper :global(div[class*="photoGallery"]),
+  .subMenuGalleryControls {
+    max-width: 1320px;
+  }
+}

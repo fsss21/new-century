@@ -243,3 +243,74 @@
     padding: 1.5rem;
   }
 }
+
+@media (min-width: 2560px), (min-height: 1440px) {
+  .background {
+    width: 86%;
+    height: 88%;
+  }
+
+  .modal {
+    max-width: 1900px;
+    height: 76vh;
+    gap: 14px;
+  }
+
+  .modalInfo {
+    min-width: 320px;
+    padding: 20px;
+  }
+
+  .infoTitle {
+    font-size: 2rem;
+  }
+
+  .infoSculptor,
+  .infoMeta,
+  .infoText {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 3840px), (min-height: 2160px) {
+  .background {
+    width: 90%;
+    height: 90%;
+  }
+
+  .modal {
+    max-width: 2900px;
+    height: 80vh;
+    gap: 18px;
+  }
+
+  .modalInfo {
+    min-width: 480px;
+    padding: 30px;
+    border-width: 3px;
+  }
+
+  .modalCloseBtn {
+    width: 52px;
+    height: 52px;
+  }
+
+  .infoTitle {
+    font-size: 2.8rem;
+  }
+
+  .infoSculptor,
+  .infoMeta,
+  .infoText {
+    font-size: 1.8rem;
+  }
+
+  .textNavArrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .textNavCounter {
+    font-size: 1.15rem;
+  }
+}
