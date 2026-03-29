@@ -10,7 +10,7 @@
 
 .video {
   flex: 1;
-  width: 80%;
+  width: 95%;
   min-height: 0;
   object-fit: contain;
   margin: 0 auto;

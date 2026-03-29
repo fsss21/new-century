@@ -59,11 +59,11 @@
   transform: translateY(-1px);
 }
 
-/* ── Info panel (25%) ── */
+/* ── Info panel (28%) ── */
 .modalInfo {
   width: 25%;
-  min-width: 220px;
-  padding: 16px;
+  min-width: 240px;
+  padding: 12px;
   background: #ECDECD;
   border: solid #000 2px;
   color: #f0e6d9;
@@ -102,13 +102,12 @@
 }
 
 .infoMeta {
-  font-size: 1rem;
+  font-size: 15.5px;
   color: #221102;
 }
 
 .infoText { 
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 16px;
   color: #221102;
 }
 
@@ -195,8 +194,8 @@
 }
 
 .photoTop .modalInfo {
-  width: 25%;
-  min-width: 220px;
+  width: 28%;
+  min-width: 240px;
 }
 
 /* ── Audio section separator ── */

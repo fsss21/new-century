@@ -11,11 +11,21 @@ import PhotoGallery from '../../../components/PhotoGallery/PhotoGallery'
 const MainMenuItem = ({ item, onClose }) => {
     if (!item) return null
 
+    // Определяем наличие медиа
     const hasVideo = item.video?.length > 0
     const hasPhotos = item.photos?.length > 0
     const hasAudio = item.audio?.length > 0
 
-    const textPages = Array.isArray(item.text) ? item.text : [item.text ?? '']
+    // Формируем текстовые страницы: описание + история (если есть и не совпадает с описанием)
+    const description = item.description || ''
+    const history = item.history || ''
+    const textPages = []
+    if (description) textPages.push(description)
+    if (history && history !== description) textPages.push(history)
+    // Если нет ни description, ни history, пробуем использовать старый item.text (массив) на всякий случай
+    if (textPages.length === 0 && Array.isArray(item.text)) {
+        textPages.push(...item.text)
+    }
     const totalTextPages = textPages.length
     const hasMultipleTextPages = totalTextPages > 1
 
@@ -29,14 +39,78 @@ const MainMenuItem = ({ item, onClose }) => {
         setTextPage((i) => (i < totalTextPages - 1 ? i + 1 : i))
     }, [totalTextPages])
 
+    // Формируем имя автора (скульптора/художника) для плееров
+    const getCreator = () => {
+        if (item.sculptors?.length) return item.sculptors.join(', ')
+        if (item.artists?.length) return item.artists.join(', ')
+        if (item.architects?.length) return item.architects.join(', ')
+        return item.creator || 'Неизвестный автор'
+    }
+
+    // Год создания (для плееров)
+    const getYear = () => item.date_opened || item.date || ''
+
+    // Блок информации (общий для всех режимов)
     const infoBlock = (
         <aside className={styles.modalInfo}>
             <h2 className={styles.infoTitle}>{item.title}</h2>
             <div className={styles.textBlock}>
                 <div className={styles.textPage}>
-                    <span className={styles.infoSculptor}><strong>Статус:</strong>{item.status}</span>
-                    <span className={styles.infoMeta}><strong>Значение:</strong>{item.meaning}</span>
-                    <span className={styles.infoMeta}><strong>Где находится:</strong>{item.location}</span>
+                    {/* Скульпторы */}
+                    {item.sculptors?.length > 0 && (
+                        <span className={styles.infoSculptor}>
+                            <strong>Скульптор(ы):</strong> {item.sculptors.join(', ')}
+                        </span>
+                    )}
+                    {/* Архитекторы */}
+                    {item.architects?.length > 0 && (
+                        <span className={styles.infoMeta}>
+                            <strong>Архитектор(ы):</strong> {item.architects.join(', ')}
+                        </span>
+                    )}
+                    {/* Художники */}
+                    {item.artists?.length > 0 && (
+                        <span className={styles.infoMeta}>
+                            <strong>Художник(и):</strong> {item.artists.join(', ')}
+                        </span>
+                    )}
+                    {/* Дата открытия */}
+                    {item.date_opened && (
+                        <span className={styles.infoMeta}>
+                            <strong>Дата открытия:</strong> {item.date_opened}
+                        </span>
+                    )}
+                    {/* Материалы */}
+                    {item.materials && (
+                        <span className={styles.infoMeta}>
+                            <strong>Материалы:</strong> {item.materials}
+                        </span>
+                    )}
+                    {/* Высота */}
+                    {item.height && (
+                        <span className={styles.infoMeta}>
+                            <strong>Размеры:</strong> {item.height}
+                        </span>
+                    )}
+                    {/* Местоположение */}
+                    {item.location && (
+                        <span className={styles.infoMeta}>
+                            <strong>Где находится:</strong> {item.location}
+                        </span>
+                    )}
+                    {/* Надписи (опционально) */}
+                    {item.inscriptions && (
+                        <span className={styles.infoMeta}>
+                            <strong>Надписи:</strong> {item.inscriptions}
+                        </span>
+                    )}
+                    {/* Тип (памятник / декоративная скульптура) */}
+                    {item.type && (
+                        <span className={styles.infoMeta}>
+                            <strong>Тип:</strong> {item.type === 'monument' ? 'Памятник' : 'Декоративная скульптура'}
+                        </span>
+                    )}
+                    {/* Текст (текущая страница) */}
                     <p className={styles.infoText}>{textPages[textPage]}</p>
                 </div>
                 {hasMultipleTextPages && (
@@ -80,8 +154,8 @@ const MainMenuItem = ({ item, onClose }) => {
                                 <VideoPlayer
                                     src={item.video[0]}
                                     title={item.title}
-                                    creator={item.creator}
-                                    year={item.date}
+                                    creator={getCreator()}
+                                    year={getYear()}
                                 />
                             </div>
                         </>
@@ -96,18 +170,56 @@ const MainMenuItem = ({ item, onClose }) => {
                                     <AudioPlayer
                                         src={item.audio[0]}
                                         title={item.title}
-                                        creator={item.creator}
-                                        year={item.date}
+                                        creator={getCreator()}
+                                        year={getYear()}
                                     />
                                 </div>
                             )}
                         </div>
                     ) : (
+                        // Только текст (нет ни видео, ни фото)
                         <div className={styles.modalInfoFull}>
                             <h2 className={styles.infoTitle}>{item.title}</h2>
-                            <span className={styles.infoSculptor}>{item.sculptor}</span>
-                            <span className={styles.infoMeta}>{item.creation}</span>
-                            <span className={styles.infoMeta}>{item.location}</span>
+                            {item.sculptors?.length > 0 && (
+                                <span className={styles.infoSculptor}>
+                                    <strong>Скульптор(ы):</strong> {item.sculptors.join(', ')}
+                                </span>
+                            )}
+                            {item.architects?.length > 0 && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Архитектор(ы):</strong> {item.architects.join(', ')}
+                                </span>
+                            )}
+                            {item.artists?.length > 0 && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Художник(и):</strong> {item.artists.join(', ')}
+                                </span>
+                            )}
+                            {item.date_opened && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Дата открытия:</strong> {item.date_opened}
+                                </span>
+                            )}
+                            {item.materials && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Материалы:</strong> {item.materials}
+                                </span>
+                            )}
+                            {item.height && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Размеры:</strong> {item.height}
+                                </span>
+                            )}
+                            {item.location && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Где находится:</strong> {item.location}
+                                </span>
+                            )}
+                            {item.inscriptions && (
+                                <span className={styles.infoMeta}>
+                                    <strong>Надписи:</strong> {item.inscriptions}
+                                </span>
+                            )}
                             <p className={styles.infoText}>{textPages[textPage]}</p>
                             {hasMultipleTextPages && (
                                 <div className={styles.textNav}>

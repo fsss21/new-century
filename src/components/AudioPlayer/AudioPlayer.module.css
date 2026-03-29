@@ -82,7 +82,7 @@
 
 .volumeSlider {
   width: 80px;
-  height: 4px;
+  height: 1px;
   accent-color: #cbb293;
   cursor: pointer;
 }

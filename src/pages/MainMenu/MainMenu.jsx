@@ -10,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const MainMenu = () => {
-    const [sculptors, setSculptors] = useState([])
+    const [monuments, setMonuments] = useState([])
     const [itemStyles, setItemStyles] = useState({})
     const [backgroundSrc, setBackgroundSrc] = useState(mainMenuImg)
     const [resolutionMode, setResolutionMode] = useState('fullHd')
@@ -20,12 +20,12 @@ const MainMenu = () => {
     useEffect(() => {
         fetch('/data/MainMenu.json')
             .then((res) => (res.ok ? res.json() : null))
-            .then((json) => setSculptors(json?.sculptors ?? []))
-            .catch(() => setSculptors([]))
+            .then((json) => setMonuments(json?.monuments ?? []))
+            .catch(() => setMonuments([]))
 
         fetch('/data/MainMenuStyles.json')
             .then((res) => (res.ok ? res.json() : null))
-            .then((json) => setItemStyles(json?.sculptorsStyles ?? {}))
+            .then((json) => setItemStyles(json?.monumentsStyles ?? {}))
             .catch(() => setItemStyles({}))
     }, [])
 
@@ -65,16 +65,16 @@ const MainMenu = () => {
                     className={styles.mainMenuBackground}
                     style={{ backgroundImage: `url(${backgroundSrc})` }}
                 />
-                {sculptors.map((sculptor, idx) => (
+                {monuments.map((monument, idx) => (
                     <div
-                        key={`${sculptor.id}-${idx}`}
-                        className={styles.sculptorItem}
+                        key={`${monument.id}-${idx}`}
+                        className={styles.monumentItem}
                         style={
-                            itemStyles?.[sculptor.id]?.[resolutionMode]
-                            ?? itemStyles?.[sculptor.id]?.fullHd
-                            ?? itemStyles?.[sculptor.id]
+                            itemStyles?.[monument.id]?.[resolutionMode]
+                            ?? itemStyles?.[monument.id]?.fullHd
+                            ?? itemStyles?.[monument.id]
                         }
-                        onClick={() => setSelectedItem(sculptor)}
+                        onClick={() => setSelectedItem(monument)}
                     />
                 ))}
             </div>

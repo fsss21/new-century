@@ -42,8 +42,23 @@ const VideoPlayer = ({ src, title, creator, year }) => {
     const handleFullscreen = useCallback(() => {
         const el = wrapRef.current
         if (!el) return
-        if (el.requestFullscreen) el.requestFullscreen()
+
+        const doc = document
+        const active =
+            doc.fullscreenElement ??
+            doc.webkitFullscreenElement ??
+            doc.mozFullScreenElement ??
+            doc.msFullscreenElement
+
+        if (active === el) {
+            if (doc.exitFullscreen) doc.exitFullscreen()
+            else if (doc.webkitExitFullscreen) doc.webkitExitFullscreen()
+            else if (doc.mozCancelFullScreen) doc.mozCancelFullScreen()
+            else if (doc.msExitFullscreen) doc.msExitFullscreen()
+        } else if (el.requestFullscreen) el.requestFullscreen()
         else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen()
+        else if (el.mozRequestFullScreen) el.mozRequestFullScreen()
+        else if (el.msRequestFullscreen) el.msRequestFullscreen()
     }, [])
 
     const handleTimeUpdate = useCallback(() => {
